@@ -1,9 +1,20 @@
+export interface Geo {
+  lat: string;
+  lng: string;
+}
+
 export interface Address {
-  city: string; 
+  street: string;
+  suite: string;
+  city: string;
+  zipcode: string;
+  geo: Geo;
 }
 
 export interface Company {
-  name: string; 
+  name: string;
+  catchPhrase: string;
+  bs: string;
 }
 
 export interface User {

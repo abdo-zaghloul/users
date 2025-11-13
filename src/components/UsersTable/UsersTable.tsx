@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import type { User } from '../../types/user.types';
 
 interface UsersTableProps {
@@ -7,6 +8,7 @@ interface UsersTableProps {
 
 export const UsersTable = ({ users }: UsersTableProps) => {
   const [expandedId, setExpandedId] = useState<number | null>(null);
+  const navigate = useNavigate();
 
   const toggleExpand = (id: number) => {
     setExpandedId(expandedId === id ? null : id);
@@ -37,12 +39,13 @@ export const UsersTable = ({ users }: UsersTableProps) => {
             </tr>
           </thead>
           <tbody>
-            {users?.map((user, index) => (
+            {users.map((user, index) => (
               <tr
-                key={user?.id}
+                key={user.id}
+                onClick={() => navigate(`/user/${user.id}`)}
                 className={`${
                   index % 2 === 0 ? 'bg-gray-50' : 'bg-white'
-                } hover:bg-gray-100 transition-colors duration-100 border-b border-gray-200`}
+                } hover:bg-blue-50 transition-colors duration-100 border-b border-gray-200 cursor-pointer`}
               >
                 <td className="px-6 py-4 text-sm text-gray-900 font-medium">{user?.name}</td>
                 <td className="px-6 py-4 text-sm text-gray-700">{user?.username}</td>
