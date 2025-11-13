@@ -6,7 +6,7 @@ A simple React application to display and search users using JSONPlaceholder API
 
 - Vite
 - React 19.2
-- React Router
+- React Router DOM
 - TypeScript
 - Axios
 - Tailwind CSS
@@ -22,6 +22,6 @@ A simple React application to display and search users using JSONPlaceholder API
 Data Flow
 1️- useUsers Hook (fetch data)
         |
-2️- App Component (Data reception)
+2️- HomePage Component (Data reception)
         |
 3️- UsersContainer (receives data props)
