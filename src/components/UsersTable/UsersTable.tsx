@@ -85,7 +85,8 @@ export const UsersTable = ({ users }: UsersTableProps) => {
               {expandedId === user?.id && (
                 <div className="px-4 pb-4 bg-white border-t border-gray-100">
                   <table className="w-full text-sm">
-                    <tbody className="divide-y divide-gray-100">
+                    <tbody className="divide-y divide-gray-100" 
+                    onClick={() => navigate(`/user/${user.id}`)}>
                       <tr>
                         <td className="py-3 font-semibold text-gray-700 w-32">Username</td>
                         <td className="py-3 text-gray-600">{user?.username}</td>
