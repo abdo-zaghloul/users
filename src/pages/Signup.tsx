@@ -1,11 +1,10 @@
 import  { useState } from "react";
-import { FormInput } from "../components/common/FormInput";
-import { Button } from "../components/common/Button";
+import { FormInput } from "../components/common/FormInput/FormInput";
+import { Button } from "../components/common/Button/Button";
 import axios from "axios";
 import axiosApi from "../api/config";
 import { useFormik } from "formik";
-// import { signupValidationSchema } from "../utils/validationSchemas";
-import type { InferType } from "yup";
+ import type { InferType } from "yup";
 import { signupValidationSchema } from "../components/validation/validationSchemas";
 
 interface ApiResponse {

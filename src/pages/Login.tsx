@@ -1,6 +1,6 @@
 import   { useState } from "react";
-import { FormInput } from "../components/common/FormInput";
-import { Button } from "../components/common/Button";
+import { FormInput } from "../components/common/FormInput/FormInput";
+import { Button } from "../components/common/Button/Button";
 import { useFormik } from "formik";
 // import { loginValidationSchema } from "../utils/validationSchemas";
 import type { InferType } from "yup";
