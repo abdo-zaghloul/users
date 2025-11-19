@@ -2,7 +2,7 @@ import { useState, useMemo, useTransition } from "react";
 import type { User } from "../../types/user.types";
 import { UsersTable } from "../UsersTable/UsersTable";
 // import { SearchFilters } from "../SearchFilters/SearchFilters";
-import { SearchInput } from "../SearchInput";
+import { SearchInput } from "../common/SearchInput/SearchInput";
 
 interface UsersContainerProps {
   users: User[];
